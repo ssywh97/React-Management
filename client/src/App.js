@@ -9,14 +9,14 @@ import TableRow from '@material-ui/core/TableRow';
 import TableCell from '@material-ui/core/TableCell';
 import { withStyles } from '@material-ui/core/styles';
 
-const styles = theme => ({
+const styles = theme => ({  //스타일 변수
   root: {
-    width: '100%',
-    marginTop: theme.spacing.unit *3,
-    overflowX: "auto"
+    width: '100%',  //너비 100%
+    marginTop: theme.spacing.unit *3,  //윗쪽 여백은 3의 가중치만큼
+    overflowX: "auto"  //x축으로 오버플로우가 발생할 수 있도록 함
   },
   table: {
-    minWidth: 1000
+    minWidth: 1080  //테이블은 1080픽셀 이상 출력될 수 있도록 
   }
 })
 
