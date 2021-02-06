@@ -272,10 +272,11 @@ class App extends Component {
     this.setState(nextState);
   }
 
+
   render() {
     const filteredComponents = (data) => {
-      data = data.filter((c) => {
-        return c.name.indexOf(this.state.searchKeyword) > -1;
+      data = data.filter((c) => { //데이터에 필터 적용
+        return c.name.indexOf(this.state.searchKeyword) > -1; //사용자가 검색한 키워드가 포함되어 있는지 여부 확인
       });
       return data.map((c) => {
         return <Customer stateRefresh={this.stateRefresh} key={c.id} id={c.id} image={c.image} name={c.name} birthday={c.birthday} gender={c.gender} job={c.job} /> 
@@ -304,9 +305,9 @@ class App extends Component {
                   root: classes.inputRoot,
                   input: classes.inputInput,
                 }}
-                name="searchKeyword"
+                name="searchKeyword" //검색창에 입력된 문자열을 searchkeyword로 관리
                 value={this.state.searchKeyword}
-                onChange={this.handleValueChange}
+                onChange={this.handleValueChange} // 실제로 값이 변경되면 handleValueChange 함수를 불러올수 있게됨
               />
             </div>
           </Toolbar>
